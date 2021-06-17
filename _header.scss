@@ -1,0 +1,33 @@
+header{
+    position: relative;
+    height:550px;
+  &>div{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      overflow: hidden;
+  }
+       .text{
+           z-index: 2;
+           border:1px solid white;
+           .wrap{
+           display:flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+           color: $secondary;
+           }
+       }
+    
+}
+
+@media(max-width:700px){
+    header{
+        .text{
+            h1{
+                font-size: 30px;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,36 @@
+nav{
+    // height:50px;
+    padding:10px 0px;
+    .wrap{
+        display:grid;
+        grid-template-columns:1fr;
+         grid-gap: 20px;
+         &>div{
+             display:flex;
+         }
+        .logo{
+        justify-content: center;
+        align-items: flex-start;
+        a{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        }
+        .links{
+            align-items: center;
+            justify-content: center;
+            ul{
+             width:300px;
+              list-style: none;
+              display: flex;
+              justify-content: space-between;
+              li{
+                  a{
+                      font-weight: bold;
+                      color:$tertiary;
+                  }
+              }
+            }
+        }
+    }
+}
