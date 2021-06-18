@@ -1,26 +1,31 @@
 nav{
-    // height:50px;
+    position: fixed;
+    width:100%;
+    background-color:$secondary;
     padding:10px 0px;
+    z-index: 100;
     .wrap{
         display:grid;
-        grid-template-columns:1fr;
+        grid-template-columns:20% 80%;
          grid-gap: 20px;
-         &>div{
-             display:flex;
-         }
+     
+
         .logo{
+            display: flex;
         justify-content: center;
         align-items: flex-start;
         a{
             font-size: 20px;
             font-weight: bold;
+letter-spacing: 3px;
         }
         }
         .links{
+            display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-end;
             ul{
-             width:300px;
+               width:200px;
               list-style: none;
               display: flex;
               justify-content: space-between;
@@ -28,8 +33,23 @@ nav{
                   a{
                       font-weight: bold;
                       color:$tertiary;
+ &:hover{
+     text-decoration: underline;
+     color:$primary;
+ }
                   }
               }
+            }
+        }
+    }
+}
+
+@media(max-width:700px){
+    nav{
+        .wrap{
+            grid-template-columns: 100%;
+            .links{
+                justify-content: center;
             }
         }
     }

@@ -1,5 +1,5 @@
 footer{
-    height:250px;
+    height:200px;
     background-color: $tertiary;
     color:$primary;
     .wrap{
@@ -11,6 +11,8 @@ footer{
             a{
                 font-size: 20px;
                 font-weight: bold;
+                 letter-spacing: 3px;
+
             }
         }
         .social{
@@ -20,6 +22,14 @@ footer{
                 list-style: none;
                 width:200px;
                 justify-content: space-evenly;
+                li{
+        a{
+            img{
+                width:25px;
+                height: 25px;
+            }
+        }
+                }
             }
         }
     }

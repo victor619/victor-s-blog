@@ -1,3 +1,5 @@
+
+
 header{
     position: relative;
     height:550px;
@@ -7,9 +9,10 @@ header{
       position: absolute;
       overflow: hidden;
   }
+ 
        .text{
            z-index: 2;
-           border:1px solid white;
+            height: 100%;
            .wrap{
            display:flex;
            flex-direction: column;
@@ -23,9 +26,17 @@ header{
 
 @media(max-width:700px){
     header{
+        .img{
+            overflow: hidden;
+            img{
+                width:150%;
+                height:100%;
+            }
+        }
         .text{
             h1{
-                font-size: 30px;
+                text-align: center;
+                font-size: 24px;
             }
         }
     }
