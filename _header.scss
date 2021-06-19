@@ -29,8 +29,30 @@ header{
     
 }
 
-@media(max-width:700px){
+@media(max-width:400px){
     header{
+        .img{
+            overflow: hidden;
+            img{
+                width:150%;
+                height:100%;
+            }
+        }
+        .text{
+            h1{
+                text-align: center;
+                font-size: 24px;
+            }
+        }
+    }
+
+}
+
+@media(max-width:768px){
+    header{
+        .img,.text{
+            height: 100%;
+        }
         .img{
             overflow: hidden;
             img{

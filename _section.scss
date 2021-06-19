@@ -3,31 +3,36 @@ section{
   padding-bottom:40px;
     .wrap{
         h1{
+            grid-column: 1/4;
             padding-top:30px;
             color:$tertiary;
         }
         .posts{
         display:grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 30px;
         &>div{
             border:1px solid $tertiary;
             border-radius:5px;
             display:grid;
-            grid-template-columns: 1fr 1fr;
-            grid-auto-rows: minmax(300px,350px);
+            grid-template-columns: 1fr;
+            grid-auto-rows: minmax(150px,250px);
             grid-gap:10px;
             overflow: hidden;
             .img{
-                grid-column: 2/2;
-                grid-row: 2/1;
                 overflow: hidden;
             }
             .text{
                 display:flex;
                 flex-direction: column;
                 justify-content: center;
+                align-items: right;
                 padding:0px 30px;
+                i{
+                    padding:10px 0px;
+                    color:$tertiary;
+                    font-size:13px;
+                }
                 p{
                     padding:10px 0px;
                     line-height: 145%;
@@ -43,6 +48,7 @@ section{
                         background-color:$primary;
                         color:$secondary;
                     }
+                    
                 }
             }
         }
@@ -52,19 +58,55 @@ section{
 
 }
 
-@media(max-width:700px){
+@media(max-width:400px){
     section{
         .wrap{
             .posts{
                 &>div{
+                    grid-column: 1/4;
                     display: grid;
-                    grid-auto-rows: minmax(200px,230px);
+                    grid-auto-rows: minmax(150px,280px);
                   .img,.text{
                       grid-column: 1/3;
-                      align-items: center;
-                      text-align: center;
+                    //   align-items: center;
+                    //   text-align: center;
+                    h2{
+                        font-size:20px;
+                    }
+                    p{
+                        font-size: 16px;
+                    }
                   }
             }
         }
     }
     }}
+
+    @media (max-width:768px) {
+        section{
+            .wrap{
+                .posts{
+                    grid-template-columns: 1fr 1fr;
+                    h1{
+                        grid-column: 1/3;
+                    }
+                    &>div{
+                        // grid-column: 1/4;
+                        display: grid;
+                        grid-auto-rows: minmax(150px,280px);
+                      .img,.text{
+                          grid-column: 1/3;
+                        //   align-items: center;
+                        //   text-align: center;
+                        h2{
+                            font-size:20px;
+                        }
+                        p{
+                            font-size: 16px;
+                        }
+                      }
+                }
+            }
+        }
+        }
+    }
